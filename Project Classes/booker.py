@@ -1,22 +1,4 @@
- def __init__(self, isbn, title, author, genre, available):
-        self.__isbn = isbn
-        self.__title = title
-        self.__author = author
-        self.__genre = genre
-        self.__available = available
-
-    # Getters
-    def get_isbn(self):
-        return self.__isbn
-
-    def get_title(self):
-        return self.__title
-
-    def get_author(self):
-        return self.__author
-
-    def get_genre(self):
-        return self.__genre
+rn self.__genre
 
     def get_available(self):
         return self.__available
