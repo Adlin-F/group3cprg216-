@@ -1,0 +1,26 @@
+
+    def set_title(self, title):
+        self.__title = title
+
+    def set_author(self, author):
+        self.__author = author
+
+    def set_genre(self, genre):
+        if 0 <= genre < len(Book.GENRES):
+            self.__genre = genre
+        else:
+            raise ValueError("Invalid genre index")
+
+    # Methods to borrow or return a book
+    def borrow_it(self):
+        self.__available = False
+
+    def return_it(self):
+        self.__available = True
+
+    # String representation of the book
+    def __str__(self):
+        return "{:14s} {:25s} {:25s} {:20s} {:s}".format(
+            self.__isbn, self.__title, self.__author, 
+            self.get_genre_name(), self.get_availability()
+        )
